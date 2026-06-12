@@ -67,13 +67,39 @@ def pct(x):
     return f"{x*100:.0f}%"
 
 # ----------------------------- Sidebar -----------------------------
+# ----------------------------- Sidebar -----------------------------
 st.sidebar.title("🎯 Predictor")
-theta = st.sidebar.slider(
-    "Peso del prior (ranking + valor)", 0.0, 1.0, 0.5, 0.05,
-    help="0 = solo datos de goles (forma/resultados). 1 = solo ranking + valor de plantel. "
-         "El resto mezcla ambos.")
+
+st.sidebar.markdown(
+    "#### Cómo funciona el motor\n"
+    "Estima cuántos goles marcará cada selección combinando **dos fuentes**:\n\n"
+    "1. **Historial de goles** (a favor y en contra) desde 2022, **ajustado por la "
+    "calidad del rival** — no vale lo mismo marcarle a Brasil que a un equipo débil — "
+    "y con **más peso a los partidos recientes**. Esto captura forma y resultados.\n\n"
+    "2. Un **ancla de ranking FIFA + valor de plantel**, para no dejarse engañar por "
+    "rachas o rivales flojos.\n\n"
+    "Con los goles esperados de cada lado, calcula la probabilidad de **cada marcador** "
+    "(modelo Poisson) y de ahí salen el 1X2, over/under y ambos marcan."
+)
+
+st.sidebar.markdown("---")
+
+theta = st.sidebar.slider("Peso del prior (ranking + valor)", 0.0, 1.0, 0.5, 0.05)
+
+st.sidebar.markdown(
+    "#### Qué hace este control\n"
+    "Decide **cuánto pesa el ancla (ranking + valor) frente al historial de goles**:\n\n"
+    "- En **0** → confía **solo en los resultados recientes**: premia la forma, pero se "
+    "deja llevar por rachas y rivales débiles.\n"
+    "- En **1** → confía **solo en ranking + valor**: marca más a los favoritos, ignora "
+    "el momento actual.\n"
+    "- En **0.5** → mezcla ambos a partes iguales (buen punto de partida).\n\n"
+    "Súbelo si crees que **la jerarquía manda**; bájalo si confías en **la forma actual**."
+)
+
 neutral = st.sidebar.checkbox("Sede neutral", value=True,
     help="Desmárcalo solo si el primer equipo juega de local (selecciones anfitrionas).")
+
 st.sidebar.markdown("---")
 st.sidebar.caption(f"Modelo entrenado: {model['meta']['fitted_on']} · "
                    f"datos desde {model['meta']['window_start']} · "
