@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "fitted_on": "2026-06-13",
+    "window_start": "2022-01-01",
+    "intercept": 0.120517,
+    "home_coef": 0.266346,
+    "note": "xG = exp(intercept + attack_home + defense_away [+ home_coef]); attack/defense = (1-theta)*data + theta*prior"
+  },
+  "teams": {
+    "France": {
+      "a_data": 0.784501,
+      "d_data": -0.703573,
+      "a_prior": 0.790276,
+      "d_prior": -0.785601,
+      "n": 55
+    },
+    "Spain": {
+      "a_data": 0.957899,
+      "d_data": -0.758979,
+      "a_prior": 0.76828,
+      "d_prior": -0.766568,
+      "n": 54
+    },
+    "Argentina": {
+      "a_data": 0.842143,
+      "d_data": -1.071995,
+      "a_prior": 0.727873,
+      "d_prior": -0.731603,
+      "n": 55
+    },
+    "England": {
+      "a_data": 0.660013,
+      "d_data": -0.834344,
+      "a_prior": 0.768742,
+      "d_prior": -0.766968,
+      "n": 54
+    },
+    "Portugal": {
+      "a_data": 0.822319,
+      "d_data": -0.653163,
+      "a_prior": 0.739863,
+      "d_prior": -0.741978,
+      "n": 54
+    },
+    "Brazil": {
+      "a_data": 0.881139,
+      "d_data": -0.604477,
+      "a_prior": 0.726345,
+      "d_prior": -0.730281,
+      "n": 50
+    },
+    "Netherlands": {
+      "a_data": 0.808466,
+      "d_data": -0.531727,
+      "a_prior": 0.708166,
+      "d_prior": -0.71455,
+      "n": 53
+    },
+    "Morocco": {
+      "a_data": 0.563314,
+      "d_data": -1.000788,
+      "a_prior": 0.670352,
+      "d_prior": -0.681829,
+      "n": 71
+    },
+    "Belgium": {
+      "a_data": 0.710444,
+      "d_data": -0.57291,
+      "a_prior": 0.673814,
+      "d_prior": -0.684825,
+      "n": 50
+    },
+    "Germany": {
+      "a_data": 0.820719,
+      "d_data": -0.488024,
+      "a_prior": 0.714102,
+      "d_prior": -0.719687,
+      "n": 52
+    },
+    "Croatia": {
+      "a_data": 0.549,
+      "d_data": -0.595777,
+      "a_prior": 0.637363,
+      "d_prior": -0.653282,
+      "n": 53
+    },
+    "Colombia": {
+      "a_data": 0.797212,
+      "d_data": -0.717713,
+      "a_prior": 0.608923,
+      "d_prior": -0.628673,
+      "n": 51
+    },
+    "Senegal": {
+      "a_data": 0.613684,
+      "d_data": -0.71244,
+      "a_prior": 0.641918,
+      "d_prior": -0.657224,
+      "n": 65
+    },
+    "Mexico": {
+      "a_data": 0.428073,
+      "d_data": -0.672098,
+      "a_prior": 0.563615,
+      "d_prior": -0.589467,
+      "n": 78
+    },
+    "United States": {
+      "a_data": 0.562824,
+      "d_data": -0.313429,
+      "a_prior": 0.616109,
+      "d_prior": -0.634891,
+      "n": 70
+    },
+    "Uruguay": {
+      "a_data": 0.405841,
+      "d_data": -0.869117,
+      "a_prior": 0.606197,
+      "d_prior": -0.626314,
+      "n": 51
+    },
+    "Japan": {
+      "a_data": 0.828677,
+      "d_data": -0.798378,
+      "a_prior": 0.579069,
+      "d_prior": -0.602839,
+      "n": 56
+    },
+    "Switzerland": {
+      "a_data": 0.649782,
+      "d_data": -0.503651,
+      "a_prior": 0.591548,
+      "d_prior": -0.613637,
+      "n": 52
+    },
+    "Iran": {
+      "a_data": 0.59034,
+      "d_data": -0.552192,
+      "a_prior": 0.393216,
+      "d_prior": -0.442015,
+      "n": 51
+    },
+    "Turkey": {
+      "a_data": 0.609906,
+      "d_data": -0.35369,
+      "a_prior": 0.607733,
+      "d_prior": -0.627642,
+      "n": 49
+    },
+    "Ecuador": {
+      "a_data": 0.247124,
+      "d_data": -1.010586,
+      "a_prior": 0.583217,
+      "d_prior": -0.606428,
+      "n": 52
+    },
+    "Austria": {
+      "a_data": 0.553751,
+      "d_data": -0.593782,
+      "a_prior": 0.544935,
+      "d_prior": -0.573302,
+      "n": 47
+    },
+    "South Korea": {
+      "a_data": 0.577782,
+      "d_data": -0.475339,
+      "a_prior": 0.495692,
+      "d_prior": -0.530691,
+      "n": 62
+    },
+    "Australia": {
+      "a_data": 0.540407,
+      "d_data": -0.672766,
+      "a_prior": 0.439819,
+      "d_prior": -0.482342,
+      "n": 51
+    },
+    "Algeria": {
+      "a_data": 0.638873,
+      "d_data": -0.626008,
+      "a_prior": 0.532999,
+      "d_prior": -0.562974,
+      "n": 63
+    },
+    "Egypt": {
+      "a_data": 0.284905,
+      "d_data": -0.665989,
+      "a_prior": 0.464644,
+      "d_prior": -0.503824,
+      "n": 62
+    },
+    "Canada": {
+      "a_data": 0.386768,
+      "d_data": -0.619287,
+      "a_prior": 0.503752,
+      "d_prior": -0.537666,
+      "n": 58
+    },
+    "Norway": {
+      "a_data": 0.780011,
+      "d_data": -0.518522,
+      "a_prior": 0.587922,
+      "d_prior": -0.6105,
+      "n": 44
+    },
+    "Panama": {
+      "a_data": 0.406555,
+      "d_data": -0.219452,
+      "a_prior": 0.349403,
+      "d_prior": -0.404103,
+      "n": 71
+    },
+    "Ivory Coast": {
+      "a_data": 0.392933,
+      "d_data": -0.643643,
+      "a_prior": 0.565475,
+      "d_prior": -0.591076,
+      "n": 56
+    },
+    "Sweden": {
+      "a_data": 0.542246,
+      "d_data": -0.099375,
+      "a_prior": 0.528367,
+      "d_prior": -0.558966,
+      "n": 47
+    },
+    "Paraguay": {
+      "a_data": 0.29435,
+      "d_data": -0.622845,
+      "a_prior": 0.441107,
+      "d_prior": -0.483457,
+      "n": 44
+    },
+    "Czech Republic": {
+      "a_data": 0.4448,
+      "d_data": -0.262212,
+      "a_prior": 0.453414,
+      "d_prior": -0.494107,
+      "n": 48
+    },
+    "Scotland": {
+      "a_data": 0.452996,
+      "d_data": -0.32596,
+      "a_prior": 0.436897,
+      "d_prior": -0.479814,
+      "n": 47
+    },
+    "Tunisia": {
+      "a_data": 0.228961,
+      "d_data": -0.599105,
+      "a_prior": 0.360614,
+      "d_prior": -0.413805,
+      "n": 63
+    },
+    "DR Congo": {
+      "a_data": 0.127548,
+      "d_data": -0.713386,
+      "a_prior": 0.410737,
+      "d_prior": -0.457177,
+      "n": 52
+    },
+    "Uzbekistan": {
+      "a_data": 0.3032,
+      "d_data": -0.613576,
+      "a_prior": 0.351581,
+      "d_prior": -0.405988,
+      "n": 52
+    },
+    "Qatar": {
+      "a_data": 0.192418,
+      "d_data": 0.018485,
+      "a_prior": 0.212568,
+      "d_prior": -0.285697,
+      "n": 61
+    },
+    "Iraq": {
+      "a_data": 0.134063,
+      "d_data": -0.480095,
+      "a_prior": 0.209345,
+      "d_prior": -0.282908,
+      "n": 59
+    },
+    "South Africa": {
+      "a_data": 0.168408,
+      "d_data": -0.360919,
+      "a_prior": 0.26513,
+      "d_prior": -0.33118,
+      "n": 60
+    },
+    "Saudi Arabia": {
+      "a_data": 0.094074,
+      "d_data": -0.43572,
+      "a_prior": 0.245558,
+      "d_prior": -0.314244,
+      "n": 74
+    },
+    "Jordan": {
+      "a_data": 0.472678,
+      "d_data": -0.209079,
+      "a_prior": 0.180748,
+      "d_prior": -0.258162,
+      "n": 60
+    },
+    "Bosnia and Herzegovina": {
+      "a_data": 0.067795,
+      "d_data": -0.104943,
+      "a_prior": 0.33556,
+      "d_prior": -0.392124,
+      "n": 41
+    },
+    "Cape Verde": {
+      "a_data": 0.124353,
+      "d_data": -0.283404,
+      "a_prior": 0.235818,
+      "d_prior": -0.305816,
+      "n": 51
+    },
+    "Ghana": {
+      "a_data": 0.211698,
+      "d_data": -0.278584,
+      "a_prior": 0.33338,
+      "d_prior": -0.390238,
+      "n": 52
+    },
+    "Curaçao": {
+      "a_data": 0.183716,
+      "d_data": -0.058782,
+      "a_prior": 0.120798,
+      "d_prior": -0.206285,
+      "n": 39
+    },
+    "Haiti": {
+      "a_data": 0.446765,
+      "d_data": -0.173907,
+      "a_prior": 0.179366,
+      "d_prior": -0.256966,
+      "n": 39
+    },
+    "New Zealand": {
+      "a_data": 0.448483,
+      "d_data": -0.378106,
+      "a_prior": 0.131606,
+      "d_prior": -0.215638,
+      "n": 44
+    }
+  }
+}
