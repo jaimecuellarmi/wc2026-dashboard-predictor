@@ -82,15 +82,23 @@ st.sidebar.caption(f"Modelo entrenado: {model['meta']['fitted_on']} · "
 # ----------------------------- Match selection -----------------------------
 st.header("Predictor de partidos — Mundial 2026")
 
+have_fx = isinstance(fixtures, pd.DataFrame) and not fixtures.empty
+st.caption(f"Fixtures cargados: {0 if not have_fx else len(fixtures)}")   # debug temporal
+
 mode = st.radio("Elegir partido", ["Del calendario", "Dos selecciones"], horizontal=True)
-if mode == "Del calendario" and fixtures is not None and len(fixtures):
-    fixtures = fixtures.copy()
-    fixtures["label"] = fixtures["date"].astype(str) + "  ·  " + fixtures["home_team"] + " vs " + fixtures["away_team"]
-    pick = st.selectbox("Partido", fixtures["label"].tolist())
-    row = fixtures[fixtures["label"] == pick].iloc[0]
-    home, away = row["home_team"], row["away_team"]
-    # Fixtures are at neutral WC venues; keep the neutral toggle as set.
-else:
+
+home = away = None
+if mode == "Del calendario":
+    if have_fx:
+        fx = fixtures.copy()
+        fx["label"] = fx["date"].astype(str) + "  ·  " + fx["home_team"] + " vs " + fx["away_team"]
+        pick = st.selectbox("Partido", fx["label"].tolist())
+        sel = fx[fx["label"] == pick].iloc[0]
+        home, away = sel["home_team"], sel["away_team"]
+    else:
+        st.warning("No hay fixtures (wc2026_fixtures.csv vacío o ausente). Usa 'Dos selecciones'.")
+
+if home is None or away is None:
     c1, c2 = st.columns(2)
     home = c1.selectbox("Equipo 1", TEAMS, index=TEAMS.index("Spain") if "Spain" in TEAMS else 0)
     away = c2.selectbox("Equipo 2", TEAMS, index=TEAMS.index("Brazil") if "Brazil" in TEAMS else 1)
